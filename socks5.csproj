@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{E804010C-28BA-4872-8D0B-8CEE06B446DC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>socks5</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="a.cs" />
+    <Compile Include="b.cs" />
+    <Compile Include="c.cs" />
+    <Compile Include="d.cs" />
+    <Compile Include="DotfuscatorAttribute.cs" />
+    <Compile Include="e.cs" />
+    <Compile Include="f.cs" />
+    <Compile Include="g.cs" />
+    <Compile Include="h.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="socks5.Controller\Analyzer.cs" />
+    <Compile Include="socks5.Controller\CallbackState.cs" />
+    <Compile Include="socks5.Controller\IHandler.cs" />
+    <Compile Include="socks5.Controller\Logging.cs" />
+    <Compile Include="socks5.Controller\LogLevel.cs" />
+    <Compile Include="socks5.Controller\ProxySocketTun.cs" />
+    <Compile Include="socks5.Controller\ProxySocketTunLocal.cs" />
+    <Compile Include="socks5.Controller\StreamWriterWithTimestamp.cs" />
+    <Compile Include="socks5.Model\Configuration.cs" />
+    <Compile Include="socks5.Model\LRUCache.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
